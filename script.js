@@ -1,4 +1,4 @@
-let highScore = localStorage.getItem("highScore") || 0;
+let highScore = Number(localStorage.getItem("highScore")) || 0;
 
 let gameSeq = [];
 let userSeq = [];
@@ -86,7 +86,7 @@ function reset() {
     level = 0;
 }
 
-function updaateHighScore(currScore) {
+function updateHighScore(currScore) {
     if(currScore > highScore) {
         highScore = currScore;
         localStorage.setItem("highScore", highScore);
@@ -94,6 +94,7 @@ function updaateHighScore(currScore) {
         document.getElementById("highScore").innerText = "High score : " + highScore;
     }
 }
+
 
 
 
