@@ -10,13 +10,12 @@ let level = 0;
 
 let h2 = document.querySelector("h2");
 
-document.addEventListener("keypress", function() {
-    if(started == false) {
-        console.log("game is started");
+document.getElementById("startBtn").addEventListener("click", function() {
+    if (!started) {
+        console.log("Game started");
         started = true;
+        levelUp();
     }
-
-    levelUp();
 });
 
 function gameFlash(btn) {
@@ -95,4 +94,5 @@ function updaateHighScore(currScore) {
         document.getElementById("highScore").innerText = "High score : " + highScore;
     }
 }
+
 
