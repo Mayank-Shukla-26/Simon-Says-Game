@@ -59,7 +59,7 @@ function checkAns(idx) {
             document.querySelector("body").style.backgroundColor = "white";
         }, 150);
 
-        updaateHighScore(level);
+        updateHighScore(level);
         reset();
     }
 } 
@@ -94,6 +94,7 @@ function updateHighScore(currScore) {
         document.getElementById("highScore").innerText = "High score : " + highScore;
     }
 }
+
 
 
 
