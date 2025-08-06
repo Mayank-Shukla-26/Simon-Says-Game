@@ -1,4 +1,5 @@
 let highScore = Number(localStorage.getItem("highScore")) || 0;
+document.getElementById("highScore").innerText = "High score : " + highScore;
 
 let gameSeq = [];
 let userSeq = [];
@@ -37,7 +38,7 @@ function levelUp() {
     level++;
     h2.innerText = `Level ${level}`;
 
-    let randIdx = Math.floor(Math.random() * 3);
+    let randIdx = Math.floor(Math.random() * 4);
     let randColor = btns[randIdx];
     let randBtn = document.querySelector(`.${randColor}`);
     gameSeq.push(randColor);
@@ -94,8 +95,3 @@ function updateHighScore(currScore) {
         document.getElementById("highScore").innerText = "High score : " + highScore;
     }
 }
-
-
-
-
-
